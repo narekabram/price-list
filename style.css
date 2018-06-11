@@ -1,0 +1,152 @@
+:root {
+  --project: 50%; }
+
+.container {
+  max-width: 960px;
+  margin: auto; }
+
+.text-center {
+  text-align: center !important; }
+
+.price-list {
+  width: 100%;
+  background-color: #e9e9e9;
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row wrap; }
+  .price-list .tariffs {
+    background-color: white;
+    margin: 40px 40px 20px 40px;
+    border-radius: 10px;
+    justify-content: center;
+    flex: 1 0 25%;
+    -webkit-box-shadow: 0px 0px 8px -1px gray;
+    -moz-box-shadow: 0px 0px 8px -1px gray;
+    box-shadow: 0px 0px 8px -1px gray; }
+    .price-list .tariffs:hover {
+      cursor: pointer;
+      transform: scale(1.07);
+      transition: all .3s ease-in-out; }
+      .price-list .tariffs:hover .tariff {
+        background-color: dodgerblue; }
+      .price-list .tariffs:hover .tariff-price, .price-list .tariffs:hover .tariff-duration {
+        color: deepskyblue; }
+    .price-list .tariffs .tariff {
+      background-color: deepskyblue;
+      color: white;
+      font-size: 1.7em;
+      font-weight: 500;
+      margin: 0;
+      padding: 15px 0;
+      border-radius: 10px 10px 0 0; }
+    .price-list .tariffs .tariff-price {
+      font-size: 3em;
+      font-weight: 700;
+      margin: 25px 0 0 0; }
+    .price-list .tariffs .tariff-duration {
+      margin-top: 0;
+      font-weight: 200;
+      font-size: 1.7em; }
+    .price-list .tariffs .tariff-desc {
+      max-width: 60%;
+      margin: auto;
+      font-size: 1em;
+      margin-bottom: 30px;
+      line-height: 1.2; }
+  .price-list .tariff-integration {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 30px 30px 60px 30px; }
+    .price-list .tariff-integration .count {
+      margin: 10px 20px; }
+      .price-list .tariff-integration .count h4 {
+        font-size: 1.3em;
+        font-weight: 400;
+        color: dimgray;
+        margin: 10px 0; }
+      .price-list .tariff-integration .count .from-to {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; }
+      .price-list .tariff-integration .count .progress {
+        height: 16px;
+        background-color: #e9e9e9;
+        border-radius: 6px; }
+      .price-list .tariff-integration .count:last-child {
+        margin-bottom: 30px; }
+
+@keyframes basicProgress {
+  from {
+    width: 0; }
+  to {
+    width: 10%; } }
+@keyframes proUserProgress {
+  from {
+    width: 0; }
+  to {
+    width: 30%; } }
+@keyframes proGbProgress {
+  from {
+    width: 0; }
+  to {
+    width: 60%; } }
+@keyframes proProjectProgress {
+  from {
+    width: 0; }
+  to {
+    width: 40%; } }
+@keyframes premiumProgress {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
+#basic:hover ~ .tariff-integration #userProgress, #basic:hover ~ .tariff-integration #gbProgress, #basic:hover ~ .tariff-integration #projectProgress {
+  width: 5%;
+  height: 16px;
+  border-radius: 6px;
+  background-color: deepskyblue;
+  animation: basicProgress 0.5s ease-in-out forwards; }
+
+#pro:hover ~ .tariff-integration #userProgress {
+  height: 16px;
+  border-radius: 6px;
+  background-color: deepskyblue;
+  animation: proUserProgress 0.7s ease-in-out forwards; }
+#pro:hover ~ .tariff-integration #gbProgress {
+  height: 16px;
+  border-radius: 6px;
+  background-color: deepskyblue;
+  animation: proGbProgress 0.7s ease-in-out forwards; }
+#pro:hover ~ .tariff-integration #projectProgress {
+  height: 16px;
+  border-radius: 6px;
+  background-color: deepskyblue;
+  animation: proProjectProgress 0.7s ease-in-out forwards; }
+
+#premium:hover ~ .tariff-integration #userProgress, #premium:hover ~ .tariff-integration #gbProgress, #premium:hover ~ .tariff-integration #projectProgress {
+  height: 16px;
+  border-radius: 6px;
+  background-color: deepskyblue;
+  animation: premiumProgress 0.9s ease-in-out forwards; }
+
+@media screen and (max-width: 576px) {
+  .price-list .tariffs {
+    flex: 1 100%; }
+    .price-list .tariffs .tariff-integration {
+      margin: 10px 10px 60px 10px; } }
+@media screen and (max-width: 768px) and (min-width: 577px) {
+  .price-list .tariffs {
+    flex: 1 25%;
+    margin: 40px 10px; }
+    .price-list .tariffs .tariff-integration {
+      margin: 10px 10px 60px 10px; } }
+@media screen and (max-width: 992px) and (min-width: 767px) {
+  .price-list .tariffs {
+    flex: 1 20%;
+    margin: 40px 10px; }
+    .price-list .tariffs .tariff-integration {
+      margin: 10px 10px 60px 10px; } }
+
+/*# sourceMappingURL=style.css.map */
